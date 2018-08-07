@@ -1,0 +1,2 @@
+Jest to krotki tekst, ktory powinien być zakodowany.
+A po zakodowaniu odkodowany.
