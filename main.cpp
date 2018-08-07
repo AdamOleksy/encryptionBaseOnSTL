@@ -11,8 +11,8 @@ int main(){
     std::string allLetters((std::istreambuf_iterator<char>(inLeaters)),
         std::istreambuf_iterator<char>());
     inLeaters.close();
-
     allLetters.erase(allLetters.end() - 1,allLetters.end());
+
     std::string randomizeLetters = allLetters;
     std::random_shuffle(randomizeLetters.begin(),randomizeLetters.end());
 
@@ -22,7 +22,6 @@ int main(){
     input.close();
 
     std::string encodedText;
-
     encodedText.reserve(textToEncode.length());
 
     std::transform(textToEncode.begin(), textToEncode.end(),
