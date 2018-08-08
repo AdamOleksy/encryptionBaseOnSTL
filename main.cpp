@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <iterator>
 #include <functional>
 #include <algorithm>
+
 
 std::string downloadText(std::string fileName);
 std::string encrypt(std::string &textToEncrypt, std::string &base, std::string &key);
@@ -13,8 +13,10 @@ int main(){
 
 
     std::string allLetters = downloadText("LettersInput.txt");
+
     std::string randomizeLetters = allLetters;
-    std::random_shuffle(randomizeLetters.begin(),randomizeLetters.end());
+    std::random_device rd;
+    std::shuffle(randomizeLetters.begin(),randomizeLetters.end(),rd);
 
     std::string textToEncode = downloadText("TextToBeEncoded.txt");
 
